@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Javascript Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="calculator-body">
         <table>
             <tr>
-                <td><input type="text" id="result"></td>
+                <td colspan="4"><input type="text" id="result"></td>
             </tr>
             <tr>
                 <td><input type="button" value="C" onclick="deleteMe()"></td>
                 <td><input type="button" value="(" onclick="calculator('(')"></td>
                 <td><input type="button" value=")" onclick="calculator(')')"></td>
+                <td><input type="button" value="" onclick="calculator(')')"></td>
             </tr>
             <tr>
                 <td><input type="button" value="7" onclick="calculator('7')"></td>
@@ -44,18 +45,6 @@
             </tr>
         </table>
     </div>
-    <script>
-        function deleteMe() {
-            document.getElementById('result').value = "";
-        }
-        function calculator(newValue) {
-            document.getElementById('result').value += newValue;
-        }
-        function answer() {
-            var a = document.getElementById('result').value;
-            var b = eval(a);
-            document.getElementById('result').value = b;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
